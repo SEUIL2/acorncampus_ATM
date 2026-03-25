@@ -33,6 +33,14 @@ public class AccountAuthServiceImp implements AccountAuthService {
     public boolean login(String accountNo, String password) {
         Account account = findAccount(accountNo);
 
+        // 중복 로그인 방지
+        for(Account a : accounts){
+            if(a.isLogined() == true){
+                System.out.println("로그아웃이 필요합니다.");
+                return false;
+            }
+        }
+
         if (account == null) {
             System.out.println("계좌가 존재하지 않습니다.");
             return false;
@@ -100,7 +108,7 @@ public class AccountAuthServiceImp implements AccountAuthService {
         accountAuthService.login("000001", "12345");
         accountAuthService.login("000001", "12345");
 
-        // 중복 로그인
+
         accountAuthService.login("000002", "1234");
 
 
