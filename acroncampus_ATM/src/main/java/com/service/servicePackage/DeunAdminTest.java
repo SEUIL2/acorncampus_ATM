@@ -13,9 +13,9 @@ public class DeunAdminTest {
 
     public static void main(String[] args) throws Exception {
 
-        // 생성자인데, 매개변수를 받지 않아서 새 Atm기계(객체)를 만드는 것을 막음
         DeunAdmin admin = new DeunAdmin();
 
+        // 생성자인데, 매개변수를 받지 않아서 새 Atm기계(객체)를 만드는 것을 막음
         // 1번 메서드 돈 조회하기
         long result = admin.checkAtmTotalCash();
         System.out.println(result);

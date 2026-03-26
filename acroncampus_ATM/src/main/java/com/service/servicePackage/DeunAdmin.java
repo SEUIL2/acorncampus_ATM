@@ -12,22 +12,30 @@ import java.util.List;
 
 public class DeunAdmin implements AdminService {
 
+    // 필드 (다른 클래스)
     private AtmMachine atmMachine;
     private List<Account> accounts;
     private TransactionBalanceService transactionBalanceService;
 
+    // 생성자
     public DeunAdmin() {
         this.atmMachine = new AtmMachine(1000000000);  // 10억
         this.accounts = new ArrayList<>();
     }
 
+    // List<AdminLog> adminLogs 를 28라인 () 안에 넣고
+    // 33라인에 this.adminLogs = new ArrayList<>();
+
     public DeunAdmin(AtmMachine atmMachine, List<Account> accounts,
                      TransactionBalanceService transactionBalanceService) {
         this.atmMachine = atmMachine;
         this.accounts = accounts;
+
         this.transactionBalanceService = transactionBalanceService;
     }
+    //
 
+    // (AdminService 인터페이스를 구현한) 구현 메서드
     @Override
     public long checkAtmTotalCash() {   // 기계 안의 총 돈 1
         return atmMachine.getTotalCash();
@@ -60,8 +68,11 @@ public class DeunAdmin implements AdminService {
         }
     }
 
-    private final List<AdminLog> adminLogs = new ArrayList<>();
+    private final List<AdminLog> adminLogs = new ArrayList<>(); // 16라인 **** 필드 입니다 같이 써줘요
+    // 31라인
+    // new Arraylist 이부분 삭제하고
 
+    // getter =>    Main 에서 List<AdminLog>,  List<Account> 를 보기 위해서
     public List<AdminLog> getAdminLogs() {
         return adminLogs;
     }
@@ -69,6 +80,7 @@ public class DeunAdmin implements AdminService {
     public List<Account> getAccounts() {
         return accounts;
     }
+    //
 
     @Override
     public void recordAdminLog(String type, long amount, LocalDateTime timestamp) {   // 5 관리자 로그 기계 자체에서 입출금 기록
@@ -88,7 +100,7 @@ public class DeunAdmin implements AdminService {
         }
         return viewAll;
     }
-
+    // 구현 메서드 끝
 
 
 }
