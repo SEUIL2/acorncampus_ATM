@@ -7,10 +7,10 @@ public class AdminLog {
     private long amount;             // 처리 금액
     private LocalDateTime timestamp; // 작업 시간
 
-    public AdminLog(String actionType, long amount) {
+    public AdminLog(String actionType, long amount, LocalDateTime timestamp) {
         this.actionType = actionType;
         this.amount = amount;
-        this.timestamp = LocalDateTime.now();
+        this.timestamp = timestamp;
     }
 
     public String getActionType() {
