@@ -3,8 +3,8 @@ package com.entity;
 public class AtmMachine {
     private long totalCash; // ATM 기기가 현재 보유 중인 총 현금
 
-    public AtmMachine(long initialCash) {
-        this.totalCash = initialCash;
+    public AtmMachine(long totalCash) {
+        this.totalCash = totalCash;
     }
 
     public long getTotalCash() {

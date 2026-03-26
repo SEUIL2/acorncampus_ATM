@@ -22,3 +22,17 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+.idea/acorncampus_ATM.iml
+.idea/compiler.xml
+.idea/misc.xml
+.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml
+.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_5_10_0.xml
+.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_10_0.xml
+.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_10_0.xml
+.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_params_5_10_0.xml
+.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_10_0.xml
+.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_10_0.xml
+.idea/libraries/Gradle__org_opentest4j_opentest4j_1_3_0.xml
+.idea/modules/acroncampus_ATM.iml
+.idea/modules/acroncampus_ATM.main.iml
+.idea/modules/acroncampus_ATM.test.iml
