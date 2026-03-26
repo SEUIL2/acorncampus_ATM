@@ -1,5 +1,8 @@
 package com.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Account {
     private String accountNo;       // 계좌번호
     private String ownerName;       // 소유자명
@@ -7,6 +10,7 @@ public class Account {
     private long balance;           // 잔액
     private int passwordErrorCount; // 비밀번호 오류 횟수 (3회 이상시 잠금용)
     private boolean isLocked;       // 계좌 잠금 상태
+    private List<String> accountRecord = new ArrayList<>();
 
     // 새 계좌를 생성할 때 사용하는 생성자
     public Account(String accountNo, String ownerName, String password, long balance) {
@@ -72,5 +76,13 @@ public class Account {
     // 계좌 잠금 설정/해제
     public void setLocked(boolean locked) {
         isLocked = locked;
+    }
+
+    public List<String> getAccountRecord() {
+        return accountRecord;
+    }
+
+    public void setAccountRecord(List<String> accountRecord) {
+        this.accountRecord = accountRecord;
     }
 }
